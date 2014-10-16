@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<!-- POPUPS -->
+
+	
+		<div class="modal fade" id="category-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id='myModalLabel'>Create a New Category</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form role='form' id='new-item-form'>
+							<div class="form-group">
+								<input type="text" name='new-category' class='form-control' id='new-category' placeholder='Enter Category Name' current-type='other'>
+							</div>
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-alert" id='add-category-button'>Add</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	
+
+	<!-- END POPUPS -->
+	
+
+
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Do Things!</h1>
+		</div>
+	</div>
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-8 objects-div">
+				<div class="object row">
+					<div class="col-md-4 object-type-title">
+						<div class="object-type"><p>Constructor</p></div>
+						<div class="object-title"><h3>Library</h3></div>
+					</div>
+					<div class="col-md-8 object-type-container">
+						
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="col-md-4">
+				
+				<div class="row">
+					<div class="type-list col-md-12">
+						<h3>New:</h3>
+						<ul class='nav objects'>
+							<li><div class='btn btn-danger hidden' id='toggle-category-popup' data-toggle="modal" data-target='#category-popup'>Constructor</div></li>
+							<li><div class='btn btn-danger' isObject='true' object-type='constructor' data-toggle="modal" data-target='#category-popup'>Constructor</div></li>
+							<li><div class='btn btn-danger' isObject='true' object-type='controller' data-toggle="modal" data-target='#category-popup'>Controller</div></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 list">
+						<form role='form' id='new-item-form'>
+							<div class="form-group">
+	    						<label for="new-item">Add a New Item</label>
+								<input type="text" name='new-item' class='form-control' id='new-item'>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+
+	<div class="templates hidden">
+		<!-- template for object container -->
+		<div class="object row" id='object-div-template'>
+			<div class="col-md-4 object-type-title">
+				<div class="object-type"><p>Constructor</p></div>
+				<div class="object-title"><h3>Library</h3></div>
+			</div>
+			<div class="col-md-8 object-type-container">
+				
+			</div>
+		</div>
+		<!-- end template for object container -->
+	</div>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/utils/Draggable.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="main.js"></script>
+	<script src="library.js"></script>
+	<script src="tag.js"></script>
+	<script src="category.js"></script>
+
+</body>
+</html>
